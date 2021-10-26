@@ -1,10 +1,8 @@
 package org.mentalizr.commons;
 
-import java.time.Duration;
-import java.time.Instant;
-import java.time.ZoneId;
-import java.time.ZonedDateTime;
+import java.time.*;
 import java.time.format.DateTimeFormatter;
+import java.time.format.FormatStyle;
 import java.util.Date;
 
 public class Dates {
@@ -37,5 +35,18 @@ public class Dates {
         return duration.toMinutes() < minutes;
     }
 
+    public static boolean isYoungerThan(String isoTest, String isoReference) {
+        ZonedDateTime reference = ZonedDateTime.parse(isoReference);
+        ZonedDateTime test = ZonedDateTime.parse(isoTest);
+        return test.isAfter(reference);
+    }
+
+    public static String asGermanDate(String iso) {
+        ZonedDateTime zonedDateTimeUTC = ZonedDateTime.parse(iso);
+        Instant instant = zonedDateTimeUTC.toInstant();
+        ZonedDateTime zonedDateTimeLocal = ZonedDateTime.ofInstant(instant, ZoneId.of("Europe/Berlin"));
+        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd.MM.yyyy");
+        return zonedDateTimeLocal.format(dateTimeFormatter);
+    }
 
 }
