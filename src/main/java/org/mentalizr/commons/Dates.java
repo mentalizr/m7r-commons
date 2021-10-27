@@ -23,6 +23,12 @@ public class Dates {
         return zonedDateTime.format(DateTimeFormatter.ISO_INSTANT);
     }
 
+    public static long toEpochMilli(String iso) {
+        ZonedDateTime zonedDateTime = ZonedDateTime.parse(iso);
+        Instant instant = zonedDateTime.toInstant();
+        return instant.toEpochMilli();
+    }
+
     public static String epochAsISO() {
         return "1970-01-01T00:00:00Z";
     }
@@ -46,6 +52,14 @@ public class Dates {
         Instant instant = zonedDateTimeUTC.toInstant();
         ZonedDateTime zonedDateTimeLocal = ZonedDateTime.ofInstant(instant, ZoneId.of("Europe/Berlin"));
         DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd.MM.yyyy");
+        return zonedDateTimeLocal.format(dateTimeFormatter);
+    }
+
+    public static String asGermanDateTime(String iso) {
+        ZonedDateTime zonedDateTimeUTC = ZonedDateTime.parse(iso);
+        Instant instant = zonedDateTimeUTC.toInstant();
+        ZonedDateTime zonedDateTimeLocal = ZonedDateTime.ofInstant(instant, ZoneId.of("Europe/Berlin"));
+        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm");
         return zonedDateTimeLocal.format(dateTimeFormatter);
     }
 
