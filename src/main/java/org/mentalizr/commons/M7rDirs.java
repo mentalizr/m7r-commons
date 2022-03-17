@@ -15,9 +15,9 @@ public class M7rDirs {
     private static final String LOG_DIR = "log";
     private static final String MONGO_DIR = "mongo";
     private static final String TOMCAT_DIR = "tomcat";
+    private static final String TEMP_DIR = "temp";
 
     private static final String CREATE_DIR = "create";
-    private static final String TEMP_DIR = "temp";
     private static final String CONFIG_FILE = "cli.config";
 
     private final Path m7rDir;
@@ -114,6 +114,14 @@ public class M7rDirs {
 
     public boolean existsGitReposDir() {
         return FileUtils.isExistingDirectory(getGitReposDir());
+    }
+
+    public Path getTempDir() {
+        return this.m7rDir.resolve(TEMP_DIR);
+    }
+
+    public boolean existsTempDir() {
+        return FileUtils.isExistingDirectory(getTempDir());
     }
 
 }
