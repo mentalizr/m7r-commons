@@ -1,4 +1,4 @@
-package org.mentalizr.commons.files;
+package org.mentalizr.commons.paths;
 
 import de.arthurpicht.utils.io.nio2.FileUtils;
 
@@ -23,4 +23,9 @@ public abstract class M7rFile {
     public String toAbsolutePathString() {
         return this.file.toAbsolutePath().toString();
     }
+
+    public String getFileName() {
+        return this.file.getFileName().toString();
+    }
+
 }

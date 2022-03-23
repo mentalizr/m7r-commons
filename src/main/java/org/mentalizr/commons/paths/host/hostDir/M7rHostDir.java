@@ -1,7 +1,7 @@
-package org.mentalizr.commons.dirs.host;
+package org.mentalizr.commons.paths.host.hostDir;
 
 import org.mentalizr.commons.EnvVarConfig;
-import org.mentalizr.commons.dirs.M7rDir;
+import org.mentalizr.commons.paths.M7rDir;
 
 import java.nio.file.Paths;
 

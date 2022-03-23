@@ -1,4 +1,4 @@
-package org.mentalizr.commons.dirs;
+package org.mentalizr.commons.paths;
 
 import de.arthurpicht.utils.io.nio2.FileUtils;
 
@@ -24,6 +24,10 @@ public abstract class M7rDir {
 
     public void create() throws IOException {
         Files.createDirectories(this.dir);
+    }
+
+    public String toAbsolutePathString() {
+        return this.dir.toAbsolutePath().toString();
     }
 
 }

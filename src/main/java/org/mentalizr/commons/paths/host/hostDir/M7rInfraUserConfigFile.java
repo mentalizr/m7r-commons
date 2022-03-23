@@ -1,7 +1,6 @@
-package org.mentalizr.commons.files.host;
+package org.mentalizr.commons.paths.host.hostDir;
 
-import org.mentalizr.commons.dirs.host.M7rInfraConfigDir;
-import org.mentalizr.commons.files.M7rFile;
+import org.mentalizr.commons.paths.M7rFile;
 
 public class M7rInfraUserConfigFile extends M7rFile {
 
