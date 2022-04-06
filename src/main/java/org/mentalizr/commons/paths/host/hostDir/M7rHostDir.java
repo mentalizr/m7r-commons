@@ -15,4 +15,8 @@ public class M7rHostDir extends M7rDir {
         super(Paths.get(EnvVarConfig.getMentalizrHostDir()));
     }
 
+    @Override
+    public String getDescription() {
+        return "m7r host config directory";
+    }
 }

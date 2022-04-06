@@ -6,6 +6,6 @@ import org.mentalizr.commons.paths.host.GitReposDir;
 public class DockerInfraInitResrcDir extends M7rDir {
 
     public DockerInfraInitResrcDir() {
-        super(GitReposDir.getInstance().asPath().resolve("infra/m7r-docker-infra/init/resrc"));
+        super(GitReposDir.createInstance().asPath().resolve("infra/m7r-docker-infra/init/resrc"));
     }
 }

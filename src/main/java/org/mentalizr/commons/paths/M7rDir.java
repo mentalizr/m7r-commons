@@ -14,6 +14,10 @@ public abstract class M7rDir {
         this.dir = path;
     }
 
+    public String getDescription() {
+        return "<no description specified>";
+    }
+
     public Path asPath() {
         return this.dir;
     }

@@ -6,6 +6,6 @@ import org.mentalizr.commons.paths.host.GitReposDir;
 public class PersistenceRdbmsDir extends M7rDir {
 
     public PersistenceRdbmsDir() {
-        super(GitReposDir.getInstance().asPath().resolve("core/m7r-persistence-rdbms"));
+        super(GitReposDir.createInstance().asPath().resolve("core/m7r-persistence-rdbms"));
     }
 }

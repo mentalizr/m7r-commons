@@ -7,7 +7,7 @@ import java.nio.file.Paths;
 
 public class ContentDir extends M7rDir {
 
-    public static ContentDir getInstance() {
+    public static ContentDir createInstance() {
         return new ContentDir();
     }
 

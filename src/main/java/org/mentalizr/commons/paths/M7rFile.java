@@ -12,6 +12,10 @@ public abstract class M7rFile {
         this.file = file;
     }
 
+    public String getDescription() {
+        return "<no description specified>";
+    }
+
     public boolean exists() {
         return FileUtils.isExistingRegularFile(this.file);
     }

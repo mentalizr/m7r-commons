@@ -7,7 +7,7 @@ import java.nio.file.Paths;
 
 public class GitReposDir extends M7rDir {
 
-    public static GitReposDir getInstance() {
+    public static GitReposDir createInstance() {
         return new GitReposDir();
     }
 

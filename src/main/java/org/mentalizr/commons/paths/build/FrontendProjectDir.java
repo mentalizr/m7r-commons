@@ -6,6 +6,6 @@ import org.mentalizr.commons.paths.host.GitReposDir;
 public class FrontendProjectDir extends M7rDir {
 
     public FrontendProjectDir() {
-        super(GitReposDir.getInstance().asPath().resolve("core/m7r-frontend-project"));
+        super(GitReposDir.createInstance().asPath().resolve("core/m7r-frontend-project"));
     }
 }

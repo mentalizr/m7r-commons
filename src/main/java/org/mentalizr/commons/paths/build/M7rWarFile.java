@@ -1,7 +1,6 @@
 package org.mentalizr.commons.paths.build;
 
 import org.mentalizr.commons.paths.M7rFile;
-import org.mentalizr.commons.paths.host.hostDir.M7rInfraConfigDir;
 
 public class M7rWarFile extends M7rFile {
 
