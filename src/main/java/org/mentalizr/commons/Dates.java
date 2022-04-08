@@ -7,6 +7,7 @@ import java.util.Date;
 
 public class Dates {
 
+    @Deprecated
     public static String currentTimestampAsISO() {
         ZonedDateTime zonedDateTime = ZonedDateTime.now();
         return zonedDateTime.format(DateTimeFormatter.ISO_INSTANT);
