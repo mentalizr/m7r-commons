@@ -11,7 +11,7 @@ public class M7rInfraUserConfigFile extends M7rFile {
     }
 
     private M7rInfraUserConfigFile() {
-        super(M7rHostConfigDir.createInstance().asPath().resolve(NAME));
+        super(M7rHostConfigCommonDir.createInstance().asPath().resolve(NAME));
     }
 
     @Override
