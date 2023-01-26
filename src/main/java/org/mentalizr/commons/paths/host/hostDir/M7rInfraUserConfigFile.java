@@ -1,6 +1,7 @@
 package org.mentalizr.commons.paths.host.hostDir;
 
 import org.mentalizr.commons.paths.M7rFile;
+import org.mentalizr.commons.paths.container.TomcatContainerM7rHostConfigDir;
 
 public class M7rInfraUserConfigFile extends M7rFile {
 
@@ -11,7 +12,7 @@ public class M7rInfraUserConfigFile extends M7rFile {
     }
 
     private M7rInfraUserConfigFile() {
-        super(M7rHostConfigDir.createInstance().asPath().resolve(NAME));
+        super(new TomcatContainerM7rHostConfigDir().asPath().resolve(NAME));
     }
 
     @Override
