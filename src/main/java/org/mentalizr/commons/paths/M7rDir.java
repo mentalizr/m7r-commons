@@ -14,8 +14,12 @@ public abstract class M7rDir {
         this.dir = path;
     }
 
+    public M7rDir(M7rDir m7rDir, String directoryName) {
+        this.dir = m7rDir.asPath().resolve(directoryName);
+    }
+
     public String getDescription() {
-        return "<no description specified>";
+        return toAbsolutePathString() + " directory";
     }
 
     public Path asPath() {

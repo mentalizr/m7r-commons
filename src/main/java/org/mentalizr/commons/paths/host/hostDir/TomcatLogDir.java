@@ -1,16 +1,12 @@
 package org.mentalizr.commons.paths.host.hostDir;
 
 import org.mentalizr.commons.paths.M7rDir;
+import org.mentalizr.commons.paths.M7rPaths;
 
 public class TomcatLogDir extends M7rDir {
 
-    private static final String NAME = "tomcat";
-
-    public static TomcatLogDir createInstance() {
-        return new TomcatLogDir(M7rHostLogDir.createInstance());
+    public TomcatLogDir() {
+        super(M7rPaths.getM7rHostLogDir(), "tomcat");
     }
 
-    private TomcatLogDir(M7rHostLogDir m7rHostLogDir) {
-        super(m7rHostLogDir.asPath().resolve(NAME));
-    }
 }

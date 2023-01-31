@@ -7,11 +7,7 @@ import java.nio.file.Paths;
 
 public class M7rHostDir extends M7rDir {
 
-    public static M7rHostDir createInstance() {
-        return new M7rHostDir();
-    }
-
-    private M7rHostDir() {
+    public M7rHostDir() {
         super(Paths.get(EnvVarConfig.getMentalizrHostDir()));
     }
 
@@ -19,4 +15,5 @@ public class M7rHostDir extends M7rDir {
     public String getDescription() {
         return "m7r host config directory";
     }
+
 }

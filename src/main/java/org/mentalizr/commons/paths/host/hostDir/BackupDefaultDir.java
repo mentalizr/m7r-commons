@@ -1,15 +1,12 @@
 package org.mentalizr.commons.paths.host.hostDir;
 
 import org.mentalizr.commons.paths.M7rDir;
+import org.mentalizr.commons.paths.M7rPaths;
 
 public class BackupDefaultDir extends M7rDir {
 
-    public static BackupDefaultDir createInstance() {
-        return new BackupDefaultDir(M7rHostDir.createInstance());
-    }
-
-    public BackupDefaultDir(M7rHostDir m7rHostDir) {
-        super(m7rHostDir.asPath().resolve("backup-default"));
+    public BackupDefaultDir() {
+        super(M7rPaths.getM7rHostDir(), "backup-default");
     }
 
 }

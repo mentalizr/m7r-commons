@@ -12,8 +12,12 @@ public abstract class M7rFile {
         this.file = file;
     }
 
+    public M7rFile(M7rDir m7rDir, String fileName) {
+        this.file = m7rDir.asPath().resolve(fileName);
+    }
+
     public String getDescription() {
-        return "<no description specified>";
+        return this.file.getFileName() + " file";
     }
 
     public boolean exists() {
