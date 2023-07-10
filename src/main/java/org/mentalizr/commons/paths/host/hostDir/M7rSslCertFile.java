@@ -4,12 +4,8 @@ import org.mentalizr.commons.paths.M7rFile;
 
 public class M7rSslCertFile extends M7rFile {
 
-    public static M7rSslCertFile createInstance() {
-        return new M7rSslCertFile();
-    }
-
-    private M7rSslCertFile() {
-        super(CertsDir.createInstance().asPath().resolve("domain.crt"));
+    public M7rSslCertFile() {
+        super(new CertsDir(),"domain.crt");
     }
 
     @Override

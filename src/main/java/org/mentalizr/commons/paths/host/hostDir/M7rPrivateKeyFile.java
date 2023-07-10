@@ -4,12 +4,8 @@ import org.mentalizr.commons.paths.M7rFile;
 
 public class M7rPrivateKeyFile extends M7rFile {
 
-    public static M7rPrivateKeyFile createInstance() {
-        return new M7rPrivateKeyFile();
-    }
-
-    private M7rPrivateKeyFile() {
-        super(CertsDir.createInstance().asPath().resolve("private.key"));
+    public M7rPrivateKeyFile() {
+        super(new CertsDir(),"private.key");
     }
 
     @Override

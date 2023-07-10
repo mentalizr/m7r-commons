@@ -4,10 +4,10 @@ import org.mentalizr.commons.paths.FileNames;
 import org.mentalizr.commons.paths.M7rFile;
 import org.mentalizr.commons.paths.M7rPaths;
 
-public class M7rInfraUserConfigFile extends M7rFile {
+public class M7rInstanceConfigFile extends M7rFile {
 
-    public M7rInfraUserConfigFile() {
-        super(M7rPaths.getM7rHostConfigDir(), FileNames.M7R_INFRA_USER_CONF);
+    public M7rInstanceConfigFile() {
+        super(M7rPaths.getM7rHostConfigDir(), FileNames.M7R_INSTANCE_CONF);
     }
 
 }
