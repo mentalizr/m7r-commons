@@ -34,6 +34,12 @@ public class Dates {
         return "1970-01-01T00:00:00Z";
     }
 
+    public static String localIsoFromEpochMillis(long epochMillis) {
+        Instant instant = Instant.ofEpochMilli(epochMillis);
+        ZonedDateTime zonedDateTime = ZonedDateTime.ofInstant(instant, ZoneId.systemDefault());
+        return zonedDateTime.format(DateTimeFormatter.ISO_DATE_TIME);
+    }
+
     public static boolean isNotOlderThanOneMinute(String iso) {
         int minutes = 1;
         ZonedDateTime reference = ZonedDateTime.parse(iso);
@@ -63,5 +69,7 @@ public class Dates {
         DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm");
         return zonedDateTimeLocal.format(dateTimeFormatter);
     }
+
+
 
 }
