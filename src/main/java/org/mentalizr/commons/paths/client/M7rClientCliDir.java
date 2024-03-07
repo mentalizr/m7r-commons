@@ -1,7 +1,6 @@
 package org.mentalizr.commons.paths.client;
 
 import org.mentalizr.commons.paths.M7rDir;
-import org.mentalizr.commons.paths.host.hostDir.M7rHostDir;
 
 public class M7rClientCliDir extends M7rDir {
 
