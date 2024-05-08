@@ -11,9 +11,9 @@ repositories {
 }
 
 dependencies {
-    implementation 'com.github.arthurpicht:utils-io:0.0.18'
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.10.0'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.10.0'
+    implementation libs.ap.utils.io
+    testImplementation libs.junit.jupiter
+    testRuntimeOnly libs.junit.engine
 }
 
 test {

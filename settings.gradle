@@ -1,2 +1,4 @@
 rootProject.name = 'm7r-commons'
 
+apply from: "../../infra/m7r-common-config/libs.gradle"
+
