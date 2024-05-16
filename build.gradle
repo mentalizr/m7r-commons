@@ -12,6 +12,7 @@ repositories {
 
 dependencies {
     implementation libs.ap.utils.io
+    testImplementation libs.ap.utils.core
     testImplementation libs.junit.jupiter
     testRuntimeOnly libs.junit.engine
 }
