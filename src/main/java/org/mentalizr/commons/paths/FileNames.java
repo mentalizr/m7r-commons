@@ -8,5 +8,6 @@ public class FileNames {
     public static final String INFRA_LOG_FILE = "m7r-infra.log";
     public static final String DAEMON_CONF = "daemon.conf";
     public static final String DAEMON_PID = "daemon.pid";
+    public static final String DAEMON_ACTIVE_FLAG_FILE = "active.flag";
 
 }
