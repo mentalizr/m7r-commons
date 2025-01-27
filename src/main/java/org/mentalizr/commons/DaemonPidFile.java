@@ -1,7 +1,7 @@
 package org.mentalizr.commons;
 
 import org.mentalizr.commons.helper.PidFile;
-import org.mentalizr.commons.paths.host.hostDir.M7rDaemonPidFile;
+import org.mentalizr.commons.paths.host.hostDir.M7rSchedulerPidFile;
 
 import java.io.IOException;
 import java.nio.file.Path;
@@ -17,7 +17,7 @@ public class DaemonPidFile {
     private final PidFile pidFile;
 
     public DaemonPidFile() {
-        this.pidFile =  new PidFile(new M7rDaemonPidFile().asPath());
+        this.pidFile =  new PidFile(new M7rSchedulerPidFile().asPath());
     }
 
     public Path asPath() {
