@@ -26,6 +26,10 @@ public abstract class M7rDir {
         return this.dir;
     }
 
+    public Path resolve(String fileName) {
+        return this.dir.resolve(fileName);
+    }
+
     public boolean exists() {
         return FileUtils.isExistingDirectory(this.dir);
     }
