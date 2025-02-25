@@ -6,7 +6,7 @@ import org.mentalizr.commons.paths.M7rFile;
 public class SchedulerConfigFile extends M7rFile {
 
     public SchedulerConfigFile() {
-        super(new SchedulerDir(), FileNames.SCHEDULER_CONF);
+        super(new M7rHostConfigDir(), FileNames.SCHEDULER_CONF);
     }
 
 }
