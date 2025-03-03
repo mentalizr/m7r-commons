@@ -6,7 +6,7 @@ import org.mentalizr.commons.paths.M7rPaths;
 public class M7rSchedulerConfigDir extends M7rDir {
 
     public M7rSchedulerConfigDir() {
-        super(M7rPaths.getM7rHostDir(),"scheduler");
+        super(M7rPaths.getM7rHostDir(),"scheduler.d");
     }
 
 }
