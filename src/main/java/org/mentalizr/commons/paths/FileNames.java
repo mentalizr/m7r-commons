@@ -7,7 +7,7 @@ public class FileNames {
     public static final String M7R_INFRA_CONF = "m7r-infra.conf";
     public static final String CICD_LOG_FILE = "m7r-cicd.log";
     public static final String INFRA_LOG_FILE = "m7r-infra.log";
-    public static final String INFRA_INTENTION_FILE = "m7r-infra-intention.log";
+    public static final String INFRA_INTENTION_FILE = "m7r-infra-intention.flag";
     public static final String SCHEDULER_PID = "scheduler.pid";
     public static final String SCHEDULER_ACTIVE_FLAG_FILE = "scheduler-active.flag";
     public static final String SCHEDULER_CONFIG_HASH_FILE = "scheduler-config.hash";
