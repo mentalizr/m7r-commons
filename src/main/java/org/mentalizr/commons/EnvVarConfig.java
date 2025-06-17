@@ -14,6 +14,9 @@ public class EnvVarConfig {
     public static final String MENTALIZR_CONTENT_DIR = "MENTALIZR_CONTENT_DIR";
     private static final String MENTALIZR_CONTENT_DIR_DEFAULT = System.getProperty("user.home") + "/gitrepos/m7r/content/";
 
+    public static final String MENTALIZR_CONTENT_TEST_DIR = "MENTALIZR_CONTENT_TEST_DIR";
+    private static final String MENTALIZR_CONTENT_TEST_DIR_DEFAULT = System.getProperty("user.home") + "/gitrepos/m7r/core/m7r-backend-test/content/";
+
     public static boolean hasEnvVarMentalizrHostDir() {
         return System.getenv(MENTALIZR_HOST_DIR) != null;
     }
@@ -48,6 +51,15 @@ public class EnvVarConfig {
     public static String getMentalizrContentDir() {
         return hasEnvVarContentDir() ?
                 System.getenv(MENTALIZR_CONTENT_DIR) : MENTALIZR_CONTENT_DIR_DEFAULT;
+    }
+
+    public static boolean hasEnvVarContentTestDir() {
+        return System.getenv(MENTALIZR_CONTENT_TEST_DIR) != null;
+    }
+
+    public static String getMentalizrContentTestDir() {
+        return hasEnvVarContentTestDir() ?
+                System.getenv(MENTALIZR_CONTENT_TEST_DIR) : MENTALIZR_CONTENT_TEST_DIR_DEFAULT;
     }
 
 }
